@@ -1,9 +1,7 @@
 require "bundler/setup"
 
-require 'redis'
-require 'resque'
-require 'resque-status'
 require 'moped'
+require 'delayed_job_mongoid'
 require 'zip/zip'
 
 require "qme/version"
@@ -18,3 +16,5 @@ require 'qme/quality_report'
 
 require 'qme/bundle/bundle'
 require 'qme/bundle/importer'
+
+require 'qme/railtie' if defined?(Rails)
